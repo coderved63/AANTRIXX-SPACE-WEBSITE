@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Statistics
+        </title>
+    </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100vw;max-width:1100px"></canvas>
+
+<script>
+var xValues = ["ISRO", "NASA", "SpaceX", "JAXA", "ESA","ROSCOSMOS"];
+var yValues = [125, 49, 44, 24, 15,20];
+var barColors = ["red", "green","blue","orange","brown","black"];
+
+new Chart("myChart", {
+  type: "horizontalBar",
+  data: {
+  labels: xValues,
+  datasets: [{
+    backgroundColor: barColors,
+    data: yValues
+  }]
+},
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Space Missions"
+    },
+    scales: {
+      xAxes: [{ticks: {min: 0, max:160}}]
+    }
+  }
+});
+</script>
+
+</body>
+</html>

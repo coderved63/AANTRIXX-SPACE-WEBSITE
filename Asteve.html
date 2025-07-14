@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astronomical Events</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #040229;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  .year {
+    display: none;
+    padding: 20px;
+    margin: 20px;
+    background-color: #F50079;
+    border-radius: 10px;
+  }
+  .year h2 {
+    margin-top: 0;
+  }
+  .year p {
+    margin-bottom: 10px;
+  }
+  .btn {
+    background-color: #F50079;
+    color: white;
+    height: 40vh;
+    width: 40vw;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 30px;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  .btn:hover{
+    box-shadow: 0px 1px 2px white,
+    0px 2px 4px white,
+    0px 4px 8px white,
+    0px 8px 16px white;
+  }
+  div:nth-child(2):hover{
+    box-shadow: 0px 1px 2px white,
+    0px 2px 4px white,
+    0px 4px 8px white,
+    0px 8px 16px white;
+  }
+  div:nth-child(3):hover {
+    box-shadow: 0px 1px 2px white,
+    0px 2px 4px white,
+    0px 4px 8px white,
+    0px 8px 16px white;
+  }
+  div:nth-child(4):hover {
+    box-shadow: 0px 1px 2px white,
+    0px 2px 4px white,
+    0px 4px 8px white,
+    0px 8px 16px white;
+  }
+  div:nth-child(5):hover{
+    box-shadow: 0px 1px 2px white,
+    0px 2px 4px white,
+    0px 4px 8px white,
+    0px 8px 16px white;
+  }
+  #main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+<div id="main">
+<button class="btn" onclick="toggleVisibility('2022')">2022 Events</button>
+<button class="btn" onclick="toggleVisibility('2023')">2023 Events</button>
+<button class="btn" onclick="toggleVisibility('2024')">2024 Events</button>
+<button class="btn" onclick="toggleVisibility('2025')">2025 Events</button>
+</div>
+<div id="year2022" class="year">
+  <h2>2022 Astronomical Events</h2>
+  <p>Full Moon: January 17, February 16, March 18, April 16, May 16, June 14, July 13, August 12, September 10, October 9, November 8, December 7</p>
+  <p>Lunar Eclipse: May 16-17, November 8-9</p>
+  <p>Solar Eclipse: November 1</p>
+  <p>Pink Moon: April 16</p>
+  <p>Half Moon: Every two weeks</p>
+  <p>Solar System Planets Events: Various planetary conjunctions and oppositions throughout the year</p>
+</div>
+
+<div id="year2023" class="year">
+  <h2>2023 Astronomical Events</h2>
+  <p>Full Moon: January 6, February 4, March 6, April 5, May 5, June 4, July 3, August 2, August 31, September 30, October 30, November 28, December 28</p>
+  <p>Lunar Eclipse: April 25-26, October 17-18</p>
+  <p>Solar Eclipse: April 20</p>
+  <p>Pink Moon: April 5</p>
+  <p>Half Moon: Every two weeks</p>
+  <p>Solar System Planets Events: Various planetary conjunctions and oppositions throughout the year</p>
+</div>
+
+<div id="year2024" class="year">
+  <h2>2024 Astronomical Events</h2>
+  <p>Full Moon: January 25, February 23, March 24, April 22, May 22, June 20, July 20, August 18, September 17, October 16, November 14, December 14</p>
+  <p>Lunar Eclipse: March 18-19, September 11-12</p>
+  <p>Solar Eclipse: March 11, September 5</p>
+  <p>Pink Moon: April 14</p>
+  <p>Half Moon: Every two weeks</p>
+  <p>Solar System Planets Events: Various planetary conjunctions and oppositions throughout the year</p>
+</div>
+
+<div id="year2025" class="year">
+  <h2>2025 Astronomical Events</h2>
+  <p>Full Moon: January 13, February 12, March 14, April 12, May 12, June 10, July 10, August 8, September 7, October 6, November 4, December 4</p>
+  <p>Lunar Eclipse: February 6-7, July 31-August 1</p>
+  <p>Solar Eclipse: February 21, August 17</p>
+  <p>Pink Moon: April 3</p>
+  <p>Half Moon: Every two weeks</p>
+  <p>Solar System Planets Events: Various planetary conjunctions and oppositions throughout the year</p>
+</div>
+
+<script>
+function toggleVisibility(year) {
+  var yearDiv = document.getElementById("year" + year);
+  if (yearDiv.style.display === "block") {
+    yearDiv.style.display = "none";
+  } else {
+    yearDiv.style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>

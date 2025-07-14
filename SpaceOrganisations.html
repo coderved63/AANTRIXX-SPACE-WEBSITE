@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceOrganisations</title>
+<style>
+    body{
+      background-color: rgba(33, 123, 131, 0.392);
+
+    }
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px; 
+  height: 97vh; 
+  background-color: rgba(163, 206, 255, 0.992);
+}
+
+.img {
+  border: 2px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  text-align: justify;
+
+}
+.p1
+{
+    color: rgb(216, 213, 213);
+    font-size: 40px;
+    margin-bottom: 100px;
+    
+
+}
+.p2
+{
+    visibility: hidden;
+    
+}
+.img:hover .p1
+{
+color: white;
+font-weight: bolder;
+opacity: 100%;
+
+}
+.img:hover
+{
+    opacity: 70%;
+   margin-left: -5%;
+   margin-right: -5%;
+   margin-top: -5%;
+
+
+}
+.img:hover .p2
+{
+    visibility: visible;
+    opacity: 100%;
+    color: rgb(255, 17, 0);
+    display: inline-block;
+    background-color: white;
+    font-size:18px;
+    
+}
+a{
+    text-decoration: none;
+}
+
+
+</style>
+</head>
+<body>
+  <div class="main">
+    <a href="isrocounter.html" class="img" style="background-image: url(isro.jpg);">   
+         <p class="p1">ISRO</p>
+         <p class="p2">ISRO, the Indian Space Research Organization, is India's national space agency.</p>
+    </a>
+    <a href="nasacounter.html" class="img" style="background-image: url(NASA.webp);">
+        <p class="p1">NASA</p>
+        <p class="p2">"NASA, the National Aeronautics and Space Administration, is the United States national space agency.</p>
+    </a>
+    <a href="spacexcounter.html" class="img" style="background-image: url(spacex1.jpg);">
+        <p class="p1">SPACEX</p>
+        <p class="p2">SPACE X is a private space agency founded by Elon Musk.</p>
+
+    </a>
+    <a href="jaxacounter.html" class="img" style="background-image: url(jaxa3.jpeg);"> 
+        <p class="p1">JAXA</p>
+        <p class="p2">The Japan Aerospace Exploration Agency (JAXA) is Japan's national aerospace and space agency.</p>
+
+    </a>
+    <a href="esacounter.html" class="img" style="background-image: url(ESA4.jpg);">
+        <p class="p1">ESA</p>
+        <p class="p2">The European Space Agency (ESA) is an intergovernmental organization dedicated to the exploration of space.
+        </p>
+    </a>
+    <a href="roscomoscounter.html" class="img"  style="background-image: url(rosco.webp);"">
+        <p class="p1">ROSCOSMOS</p>
+        <p class="p2">The Russian Federal Space Agency, commonly known as Roscosmos is space institute of the Russian Federation.
+        </p>
+    </a>
+  </div>
+</body>
+</html>

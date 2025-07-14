@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moon, Mars, and Organizations</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000000;
+    background-image: url(space2.jpg);
+  }
+
+  #common {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #moon, #mars {
+    width: 45%;
+    height: 100%;
+    background-color: #040229;
+    color: #f50079;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .moon-image, .mars-image {
+    position: absolute;
+    bottom: -1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotate 10s linear infinite;
+    width: 150px;
+    height: 150px;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
+
+  .timeline {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 20px; 
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px; 
+    height: 100%; 
+    background-color: #999999;
+    transform: translateX(-50%);
+  }
+
+  .year {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0; 
+    cursor: pointer;
+    margin-bottom: 20px; 
+    border-radius: 5px;
+    border: 5px;
+    border-color: black;
+    background-color: rgb(205, 205, 205);
+  }
+
+  .info {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: calc(50% + 20px);
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  .year:hover > .info {
+    display: block;
+  }
+
+  .info p {
+    margin: 0;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <div id="common">
+    <div id="moon">
+      <h1>Moon</h1>
+      <div class="timeline">
+        <div class="year">1969
+          <div class="info">
+            <p>First manned mission to the Moon: Apollo 11</p>
+          </div>
+        </div>
+        <div class="year">1972
+          <div class="info">
+            <p>Last manned mission to the Moon: Apollo 17</p>
+          </div>
+        </div>
+        <div class="year">1998
+          <div class="info">
+            <p>Launch of Lunar Prospector</p>
+          </div>
+        </div>
+        <div class="year">2009
+          <div class="info">
+            <p>Launch of LCROSS (Lunar Crater Observation and Sensing Satellite)</p>
+          </div>
+        </div>
+        <div class="year">2023
+          <div class="info">
+            <p>Launch of Chandrayaan 3 by Isro</p>
+          </div>
+        </div>
+      </div>
+      <img class="moon-image" src="MOON3.png" alt="Moon Image">
+    </div>
+    <div id="mars">
+      <h1>Mars</h1>
+      <div class="timeline">
+        <div class="year">2003
+          <div class="info">
+            <p>Launch of Mars Exploration Rovers (Spirit and Opportunity)</p>
+          </div>
+        </div>
+        <div class="year">2012
+          <div class="info">
+            <p>Curiosity Rover lands on Mars</p>
+          </div>
+        </div>
+        <div class="year">2013
+          <div class="info">
+            <p>ISRO Sends Mars Orbiter</p>
+          </div>
+        </div>
+        <div class="year">2018
+          <div class="info">
+            <p>InSight lands on Mars</p>
+          </div>
+        </div>
+        <div class="year">2020
+          <div class="info">
+            <p>Perseverance Rover lands on Mars</p>
+          </div>
+        </div>
+      </div>
+      <img class="mars-image" src="Marss.png" alt="Mars Image">
+    </div>
+  </div>
+</body>
+</html>

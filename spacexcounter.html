@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #i1 {
+            width: 5%;
+            height: 5%;
+        }
+        .main1 {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            font-size: large;
+        }
+        .main2 {
+            margin-left: 25px;
+        }
+        .r1 {
+            color: rgb(249, 249, 254);
+            font-size: 54px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .r2 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .upm {
+            display: none; 
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: auto;
+        }
+        .column {
+            text-align: center;
+        }
+        .counter {
+            font-size: 2em;
+            padding: 20px;
+            border: 2px solid #2efb05;
+            border-radius: 5px;
+        }
+        .pmain {
+            color: white;
+        }
+        .img {
+  border: 2px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  text-align: justify;
+  width: 100%;
+  height: 300%;
+
+}
+
+
+.p2
+{
+    visibility: hidden;
+    text-align: center;
+}
+.img:hover .p1
+{
+color: white;
+font-weight: bolder;
+opacity: 100%;
+
+}
+.img:hover
+{
+    opacity: 80%;
+   margin-left: -5%;
+   margin-right: -5%;
+   margin-top: -5%;
+
+
+}
+.img:hover .p2
+{
+    visibility: visible;
+    opacity: 100%;
+    color: red;
+    display: inline-block;
+
+    background-color: white;
+    font-size:28px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+.blank
+{
+    width:10%;
+    height:35%;
+}
+#p1
+{
+    color: black;
+    display: inline-block;
+    background-color: rgb(2, 255, 255);
+}
+.form
+{
+    color: white;
+    font-size: 20px;
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="main1" style="background-image: url(spacex.webp);">
+        <div class="r1">SPACEX
+            <img id="i1" src="usa.jpeg">
+        </div>
+        <br><br>
+           
+        <p id="p1" onclick="upc()">UPCOMING MISSIONS ▼</p>
+        <div class="upm" id="upm1" >
+                <a href="https://www.spacex.com/launches/mission/?mission=bandwagon-1" style="background-image: url(bandwagon1.webp);" class="img">
+                <p class="p2">BANDWAGON 1  </p>
+                </a>
+            
+                <a href="https://www.spacex.com/launches/mission/?mission=starlink" style="background-image: url(STARLINK.jpg);" class="img">
+                <p class="p2">STARLINK</p>
+                <p class="pinfo"></p>
+                </a>
+                <a href="https://www.spacex.com/launches/mission/?mission=crew-9" id="i2" class="img" style="background-image: url(CERW9.jpeg);" >
+                    <p class="p2">CREW-9</p>
+                    <p class="pinfo"></p>
+                </a>
+        </div>
+<div class="blank"></div>
+        <div class="r2">
+            <div class="column">
+                <p class="pmain">TOTAL MISSIONS LAUNCHED</p>
+                <p id="counter1" class="counter">0</p>
+            </div>
+            <div class="column">
+                <p class="pmain">TOTAL MISSIONS SUCCESFUL</p>
+                <p id="counter2" class="counter">0</p>
+            </div>
+            <div class="column">
+                <p class="pmain">TOTAL MISSIONS FAILED</p>
+                <p id="counter3" class="counter">0</p>
+            </div>
+            <div class="column">
+                <p class="pmain">TOTAL MISSIONS ONGOING</p>
+                <p id="counter4" class="counter">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startCount(cid, target) {
+            var cele = document.getElementById(cid);
+            var count = 0;
+
+            var interval = setInterval(function() {
+                if (count <= target) {
+                    cele.innerText = count;
+                    count++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 5);
+        }
+
+        startCount('counter1', 333);
+        startCount('counter2', 297); 
+        startCount('counter3', 36); 
+        startCount('counter4', 7); 
+
+        function upc() {
+            var upm = document.getElementById("upm1");
+            if (upm.style.display === "none") {
+                upm.style.display = "grid";
+            } else {
+                upm.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

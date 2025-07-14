@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Astronomy Section</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            #hubtel{
+                height: 97vh;
+                width: 30vw;
+                background-image: url(space6.jpeg);
+                background-size: 30vw 97vh;
+            }
+            #asteve{
+                height: 97vh;
+                width: 31.5vw;
+                border-style: solid;
+                overflow: hidden; 
+                position: relative;  
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;          
+            }
+            #asteve::after{
+                content: "Astronomical Events";
+                color: white;
+                position: absolute;
+                top: 110%;
+                left: 31.5%;
+                transition: all 0.4s ease;      
+            }
+            #asteve:hover::after{
+                content: "Astronomical Events";
+                color: white;
+                top: 50%;
+                left: 32%;
+                transform: scale(2,2);
+            }
+           
+            
+            #asthis{
+                height: 97vh;
+                width: 31.5vw;
+                border-style: solid;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                overflow: hidden;
+                position: relative;
+            }
+            #telescope{
+                height: 97vh;
+                width: 31vw;
+                border-style: solid;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                overflow: hidden;
+                position: relative;
+            
+            }
+            #telescope::before{
+                
+                position: absolute;
+                transform: scale(1.25,1.25);
+                top: 60%;
+                left: 34%;
+            }
+            #telescope::after{
+                content: "Telescopes";
+                position: absolute;
+                top: 110%;
+                left: 44%;
+                color: white;
+                transition: all 0.4s ease;
+            }
+            #telescope:hover::after{
+                content: "Telescopes";
+                transform: scale(2,2);
+                top: 50%;
+                left: 44%;
+            }
+            
+            #telescope img:hover{
+                scale: 1.2;
+                filter: brightness(25%);
+            }
+            #asteve img{
+                position: relative;
+            }
+            #asteve img:hover{
+                position: absolute;
+                left: -5%;
+                scale: 1.2;
+                filter: brightness(25%);
+            }
+            #asthis img{
+                position: relative;
+            }
+            #asthis img:hover{
+                scale: 1.2;
+                filter: brightness(20%);
+                position: absolute;
+                left: 8%;
+            }
+            #asthis::after{
+                position: absolute;
+                content: "Astronomical History";
+                top: 110%;
+                left: 34%;
+                color: white;
+                transition: all 0.4s ease;
+                
+            }
+            #asthis:hover::after{
+                content: "Astronomical History";
+                top: 50%;
+                left: 34%;
+                transform: scale(2,2);
+                color: white;
+            }
+        </style>
+        <script>
+            function Asteve(){
+                window.location.href="Asteve.html";
+            }
+            function Telescopes(){
+                window.location.href="Telescopes.html";
+            }
+            function Asthis(){
+                window.location.href="Asthis.html";
+            }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div style="display: flex; justify-content:space-around ;">
+            <div id="telescope" onclick="Telescopes()">
+                <div id="telsub" style="position: relative;"><img src="space5.jpg" style="height: 97vh; width: 55vw; size: 30vw; position: absolute; left:-32%;"></div>
+            </div>
+            <div id="asteve" style="position: relative;" onclick="Asteve()"><div id="astsub" ><img src="/space8.avif" style="height: 105vh; width: 52vw; size: 30vw; position:absolute; left:-60%; top:-5%;"></div></div>
+            <div id="asthis" onclick="Asthis()"><img src="/asthis.jpg" style="height: 97vh; width: 40vw;"></div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#hubtel").hover(function(){
+                    $(this).css("scale","2");
+                });
+                $("#telescope").hover(function(){
+                    $(this).css("overflow", "hidden");
+                });
+            });
+        </script>
+    </body>
+</html>

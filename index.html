@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MainPage</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+    }
+
+    #nav {
+      height: 12vh;
+      width: 100vw;
+      background-color: #040229;
+      color: white;
+    
+    }
+    
+
+    #navitems {
+      display: flex;
+      
+
+    }
+
+    #main {
+      
+      width: 100vw;
+      scroll-snap-type: y mandatory;
+      display: flex;
+    }
+
+    #main1 {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    #main11 {
+      height: 88vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    #main11a {
+      height: 10vh;
+      width: 40vw;
+      top: 65vh;
+      left: 1.5vw;
+      position: absolute;
+      color: white;
+    }
+
+    #main11::before {
+      position: absolute;
+      height: 88vh;
+      width: 100vw;
+      content: "";
+      background: linear-gradient(to right, black 80%, white);
+    }
+
+    #main11::after {
+      content: "NASA CREW";
+      color: white;
+      position: absolute;
+      top: 50%;
+      font-size: 75px;
+      font-weight: bolder;
+    }
+
+    #main111 {
+      position: absolute;
+      height: 11.5vh;
+      width: 6vw;
+      border-radius: 50%;
+      top: 40%;
+      left: 92.5%;
+      background-color: #0402296d;
+      color: white;
+      font-size: 35px;
+      font-weight: bolder;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: button;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    #main111:hover {
+      cursor: pointer;
+    }
+
+    #main12 {
+      height: 88vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    #main12::before {
+      position: absolute;
+      height: 88vh;
+      width: 100vw;
+      content: "";
+      background: linear-gradient(to right, black 80%, white);
+    }
+
+    #main12::after {
+      content: "SpaceX launch";
+      color: white;
+      position: absolute;
+      top: 50%;
+      font-size: 75px;
+      font-weight: bolder;
+    }
+
+    #main121 {
+      position: absolute;
+      height: 11.5vh;
+      width: 6vw;
+      border-radius: 50%;
+      top: 40%;
+      left: 92.5%;
+      background-color: #0402296d;
+      color: white;
+      font-size: 35px;
+      font-weight: bolder;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: button;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    #main121:hover {
+      cursor: pointer;
+    }
+
+    #main122 {
+      position: absolute;
+      height: 11.5vh;
+      width: 6vw;
+      border-radius: 50%;
+      top: 40%;
+      left: 1%;
+      background-color: #0402296d;
+      color: white;
+      font-size: 35px;
+      font-weight: bolder;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: button;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    #main122:hover {
+      cursor: pointer;
+    }
+    #main12a {
+      height: 10vh;
+      width: 55vw;
+      top: 65vh;
+      left: 1.5vw;
+      position: absolute;
+      color: white;
+    }
+
+    #main13 {
+      position: relative;
+      height: 88vh;
+      width: 100vw;
+      background-image: url(/asthis.jpg);
+    }
+
+    #main132 {
+      position: absolute;
+      height: 11.5vh;
+      width: 6vw;
+      border-radius: 50%;
+      top: 40%;
+      left: 1%;
+      background-color: #0402296d;
+      color: white;
+      font-size: 35px;
+      font-weight: bolder;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: button;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    #main132:hover {
+      cursor: pointer;
+    }
+
+    #main131 {
+      position: absolute;
+      height: 11.5vh;
+      width: 6vw;
+      border-radius: 50%;
+      top: 40%;
+      left: 92.5%;
+      background-color: #0402296d;
+      color: white;
+      font-size: 35px;
+      font-weight: bolder;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: button;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    #main131:hover {
+      cursor: pointer;
+    }
+    #main13::after {
+      width: 60vw;
+      content: "ISRO to dedicate satellite for study of Black Hole";
+      text-wrap:wrap;
+      color: white;
+      position: absolute;
+      top: 55%;
+      font-size: 50px;
+      font-weight: bolder;
+    }
+    #main13a {
+      height: 10vh;
+      width: 40vw;
+      top: 70vh;
+      left: 1.5vw;
+      position: absolute;
+      color: white;
+    }
+
+    #main14 {
+      position: relative;
+      height: 88vh;
+      width: 100vw;
+    }
+    #main14::after {
+      content: "JAXA SLATS";
+      color: white;
+      position: absolute;
+      top: 55%;
+      font-size: 75px;
+      font-weight: bolder;
+    }
+    #main14a {
+      height: 10vh;
+      width: 50vw;
+      top: 65vh;
+      left: 1.5vw;
+      position: absolute;
+      color: white;
+    }
+    #main141 {
+      position: absolute;
+      height: 11.5vh;
+      width: 6vw;
+      border-radius: 50%;
+      top: 40%;
+      left: 92.5%;
+      background-color: #0402296d;
+      color: white;
+      font-size: 35px;
+      font-weight: bolder;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: button;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes button {
+      0% {
+        background-color: #040229;
+      }
+
+      25% {
+        background-color: #f5007b4a;
+      }
+
+      50% {
+        background-color: #f5007b6d;
+        scale: 1.01;
+      }
+
+      75% {
+        background-color: #f5007bb4;
+        scale: 1.05;
+      }
+
+      100% {
+        background-color: #F50079;
+        scale: 1.1;
+      }
+    }
+
+    #main141 {
+      position: absolute;
+      height: 11.5vh;
+      width: 6vw;
+      border-radius: 50%;
+      top: 40%;
+      left: 1%;
+      background-color: #0402296d;
+      color: white;
+      font-size: 35px;
+      font-weight: bolder;
+      align-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: button;
+      animation-duration: 2s;
+    }
+
+    #main141:hover {
+      cursor: pointer;
+    }
+
+    #main2 {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+    }
+
+    #main21 {
+      height: 71vh;
+      width: 95vw;
+      display: flex;
+
+      margin-left: 2vw;
+      justify-content: space-around;
+    }
+
+    #main22 {
+      height: 15vh;
+      width: 95vw;
+
+      margin-left: 2vw;
+      justify-content: space-around;
+    }
+
+    #main211 {
+      height: 70vh;
+      width: 28vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #main211::before {
+      position: absolute;
+      content: "";
+      color: white;
+      font-size: 28px;
+      height: 70vh;
+      width: 28vw;
+      background: linear-gradient(to right, black, white);
+    }
+
+    #main211::after {
+      position: absolute;
+      content: "ISRO-SPACEX";
+      color: white;
+      font-size: 28px;
+      font-family: 'Times New Roman', Times, serif;
+      left: 3px;
+      font-weight: bold;
+      transition: 400ms;
+    }
+
+    #main211:hover::after {
+      font-size: 18px;
+      content: "ISRO to use Elon Musk’s SpaceX rocket to launch heavy comms satellite";
+      top: 60vh;
+      right: 5px;
+    }
+
+    #main212 {
+      height: 70vh;
+      width: 42vw;
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    #main212::before {
+      position: absolute;
+      height: 70vh;
+      width: 46vw;
+      content: "";
+      background-image: linear-gradient(to right, black 50%, white);
+    }
+
+    #main212::after {
+      position: absolute;
+      content: "GaganYaan";
+      font-size: 28px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+      color: white;
+      transition: all 300ms;
+    }
+
+    #main212:hover::after {
+      top: 49vh;
+      font-size: 18px;
+      content: "Launching crew of 3 members to an orbit of 400 km for a 3 days mission and bring them back!";
+      left: 5px;
+      right: 60px;
+    }
+
+    #main213 {
+      height: 70vh;
+      width: 20vw;
+
+    }
+
+    #main2131 {
+      height: 34vh;
+      width: 20vw;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1vh;
+    }
+
+    #main2131::before {
+      content: "";
+      position: absolute;
+      background-image: linear-gradient(to right, black 40%, white);
+      height: 35vh;
+      width: 20vw;
+    }
+
+    #main2131::after {
+      position: absolute;
+      content: "RLV-TD";
+      color: white;
+      font-size: 28px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+      color: white;
+      left: 4px;
+      transition: 400ms;
+    }
+
+    #main2131:hover::after {
+      content: "Reusable Launch Vehicle – Technology Demonstrator ";
+      top: 26vh;
+      font-size: 16px;
+      left: 3px;
+    }
+
+    #main2132 {
+      height: 34vh;
+      width: 20vw;
+      position: relative;
+    }
+
+    #main2132::before {
+      content: "";
+      position: absolute;
+      background-image: linear-gradient(to right, black, white);
+      height: 35vh;
+      width: 20vw;
+    }
+
+    #main2132::after {
+      position: absolute;
+      content: "NASA";
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      transition: 400ms;
+    }
+
+    #main2132:hover::after {
+      content: "Hubble Spots a Galaxy Hidden in a Dark Cloud";
+      color: white;
+      font-size: 18px;
+      top: 27vh;
+      left: 5px;
+      right: 3px;
+    }
+
+    #main221 {
+      height: 8vh;
+      width: 90vw;
+      display: flex;
+      justify-content: space-around;
+      margin-left: 2vw;
+    }
+
+    #main2211 {
+      height: 5vh;
+      width: 10vw;
+      background-color: #040229;
+      color: white;
+      font-size: 18px;
+      border-radius: 30px;
+      padding-top: 1vh;
+      padding-left: 1vw;
+      animation-name: quiup;
+      animation-duration: 1.2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes quiup {
+      0% {
+        background-color: #040229;
+      }
+
+      100% {
+        background-color: #F50079;
+      }
+    }
+
+    #main2212 {
+      height: 8vh;
+      width: 70vw;
+
+    }
+
+    #main222 {
+      height: 7vh;
+      width: 90vw;
+      display: flex;
+      margin-left: 2vw;
+      justify-content: space-around;
+    }
+
+    #main2221 {
+      height: 7vh;
+      width: 45vw;
+      border-style: solid;
+      border-radius: 30px;
+      font-size: 25px;
+      padding-top: 1.5vh;
+      padding-left: 16vw;
+    }
+
+    #main2222 {
+      height: 7vh;
+      width: 20vw;
+      border-style: solid;
+      border-style: double;
+      border-radius: 30px;
+      background-color: #040229;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+    }
+
+    #main223 {
+      height: 6vh;
+      width: 90vw;
+
+      display: flex;
+      justify-content: space-around;
+      margin-left: 2vw;
+    }
+
+    #main2231 {
+      height: 6vh;
+      width: 25vw;
+    }
+
+    #main2232 {
+      height: 6vh;
+      width: 25vw;
+    }
+
+    #main2233 {
+      height: 6vh;
+      width: 25vw;
+    }
+
+    .class1 {
+      margin-top: 15px;
+      margin-left: 0px;
+      height: 7vh;
+      width: 12vw;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .class1:hover {
+      background-color: #F50079;
+    }
+    .class2:hover{
+      background-color: #F50079;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    #footer{
+      height: 60vh;
+      width: 100vw;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      background-color: #040229;
+      position: relative;
+    }
+    #f1{
+      display: flex;
+      flex-direction: column;
+      color:#F50079;
+      position:absolute;
+      top: 24vh;  
+      width: 60vw;
+      left: 40vw;
+      font-size: 18px;
+      gap: 2vh;
+      position: relative; 
+      overflow: hidden;   
+    }
+    #f11::after{
+      position: absolute;
+      content: "_____";
+      left: -4vw;
+      width: 2vw;
+      height: 1px;
+      color: #F50079;
+      transition: all 1s;
+    }
+    #f11:hover::after{
+      left: 0vw;
+    }
+    #f12::after{
+      position: absolute;
+      content: "________";
+      left: -6.1vw;
+      width: 2vw;
+      height: 1px;
+      color: #F50079;
+      transition: all 1s;
+    }
+    #f12:hover::after{
+      left: 0vw;
+    }
+    #f13::after{
+      position: absolute;
+      content: "________";
+      left: -6.1vw;
+      width: 2vw;
+      height: 1px;
+      color: #F50079;
+      transition: all 1s;
+    }
+    #f13:hover::after{
+      left: 0vw;
+    }
+    #f2{
+      display: flex;
+      flex-direction: column;
+      color:#F50079;
+      position:absolute;
+      top: 24vh;  
+      left: 50vw;
+      font-size: 18px;
+      gap: 2vh; 
+      overflow: hidden;
+    }
+    #f21::after{
+      position: absolute;
+      content: "_________________";
+      left: -13vw;
+      width: 2vw;
+      height: 1px;
+      color: #F50079;
+      transition: all 1s;
+    }
+    #f21:hover::after{
+      left: 0vw;
+    }
+    #f22::after{
+      position: absolute;
+      content: "__________";
+      left: -8vw;
+      width: 2vw;
+      height: 1px;
+      color: #F50079;
+      transition: all 1s;
+    }
+    #f22:hover::after{
+      left: 0.1vw;
+    }
+    #f23::after{
+      position: absolute;
+      content: "_______";
+      left: -6.1vw;
+      width: 2vw;
+      height: 1px;
+      color: #F50079;
+      transition: all 1s;
+    }
+    #f23:hover::after{
+      left: 0.2vw;
+    }
+    
+    #f3{
+      width: 35vw;
+      display: flex;
+      flex-direction: column;
+      color:#F50079;
+      position:absolute;
+      top: 24vh; 
+      width: 32vw; 
+      left: 68vw;
+      font-size: 18px;
+      gap: 2vh;
+      overflow: hidden;   
+    }
+    #f31::after{
+      position: absolute;
+      content: "__________________";
+      left: -14vw;
+      width: 2vw;
+      height: 1px;
+      color: #F50079;
+      transition: all 1s;
+    }
+    #f31:hover::after{
+      left: 0vw;
+    }
+    #f32::after{
+      position: absolute;
+      content: "_________";
+      left: -6.9vw;
+      width: 2vw;
+      height: 1px;
+      color: #F50079;
+      transition: all 1s;
+    }
+    #f32:hover::after{
+      left: 0vw;
+    }
+    #name:hover{
+      color:#F50079;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    function Destinations() {
+      window.location.href = "Destinations.html"
+
+    }
+    function AboutUs() {
+      window.location.href = "AboutUs.html";
+    }
+    function SpaceOrganisations() {
+      window.location.href = "SpaceOrganisations.html"
+    }
+    function AstronomySection() {
+      window.location.href = "AstronomySection.html"
+    }
+    function Statistics() {
+      window.location.href = "Statistics.html"
+    }
+    function Subscribe() {
+      window.location.href = "Subscribe.html"
+    }
+    function mission(){
+      window.location.href="missions.html"
+    }
+    function weight(){
+      window.location.href="weightres.html"
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav id="nav">
+      <div id="navitems">
+        <!-- <div style="position:absolute; left:5vw;" id="navi">
+          <img src="navimg.png" style="height: 6vh; width:3vw;">
+        </div> -->
+        
+         
+        <div style="width:26vw; font-size:20px; display:flex; justify-content:center; align-items:center; font-family:'Times New Roman', Times, serif; font-size:35px; font-weight:bolder; margin-top:15px; margin-left:-35px" id="name">AANTRIXX</div>
+        <div class="class1" onclick="AboutUs()">About Us</div>
+        <div class="class1" onclick="mission()">Mission
+        </div>
+        <div class="class1" onclick="SpaceOrganisations()">Space Organisations</div>
+        <div onclick="Destinations()" class="class1">Destinations</div>
+        <div onclick="Statistics()" class="class1">Statistics</div>
+        <div class="class1" onclick="AstronomySection()">Astronomy Section</div> 
+      </div>
+    </nav>
+  </header>
+
+  <section id="main">
+    <div>
+      <div id="main1">
+
+        <div id="main11">
+          <img src="Crewmate.jpg" style="height: 88vh; width: 100vw; filter:brightness(40%); position:absolute;">
+          <div id="main111">&gt;</div>
+          <div id="main11a">NASA and SpaceX announced this week that a mission to the International Space Station (ISS), originally slated for this weekend, has been rescheduled for Nov. 14.</div>
+
+        </div>
+        <div id="main12">
+          <img src="SpaceX-NASA-Launch-04.webp"
+            style="height: 88vh; width: 100vw; filter:brightness(69%); position:absolute;">
+          <div id="main121">&gt;</div>
+          <div id="main122">&lt;</div>
+          <div id="main12a">SpaceX launched Bandwagon-1 from Kennedy Space Center, its first dedicated rideshare mission targeting mid-inclination orbits, distinct from Transporter missions. The Falcon 9 rocket deployed 11 satellites, including South Korea's "425 Project" and HawkEye 360's geolocation satellites. Bandwagon-1's inclination enhances coverage for various applications like monitoring illegal fishing. SpaceX reports high demand for rideshare services, urging customers to adhere to standard accommodations while offering additional services.</div>
+          </div>
+          <div id="main13">
+            <img src="isro-usher.jpg" style="height: 88vh; width: 100vw; filter:brightness(50%); position:absolute;">
+            <div id="main131">&gt;</div>
+            <div id="main132">&lt;</div>
+            <div id="main13a">The PSLV-C58 rocket, in its 60th mission, would carry primary payload XPoSat and 10 other satellites to be deployed in low earth orbits.</div>
+            </div>
+            <div id="main14">
+              <img src="JAXA_SLATS.jpg" style="height: 88vh; width: 100vw; filter:brightness(40%); position:absolute;">
+              <div id="main141">&lt;</div>
+              <div id="main14a">SLATS, led by JAXA, is testing high-speed laser communication in space. Equipped with laser terminals, the satellite aims to validate this technology's feasibility for future missions. It seeks to confirm data rates, signal stability, and performance under various conditions. Success could revolutionize satellite and deep space communication. JAXA collaborates globally to advance laser tech.</div>
+              </div>
+            </div>
+            <div id="main2">
+              <div id="main21">
+                <div id="main211"><img src="isro-spacex.jpg"
+                    style="height: 70vh; width:30vw; size:30vw; position: absolute; left:-2%; filter:brightness(90%); filter:opacity(65%);">
+                </div>
+                <div id="main212"><img src="Gaganyaan.jpg"
+                    style="height: 76vh; width: 46vw; size:30vw; position: absolute; left: -8%; filter: brightness(85%); filter:opacity(65%)">
+                </div>
+                <div id="main213">
+                  <div id="main2131"><img id="main2131i" src="/Isro.webp"
+                      style="position: absolute; height: 45vh; width: 50vw; left: -103%; top: -16%; filter:brightness(70%); filter:opacity(80%); background: linear-gradient(to right, black, white);">
+                  </div>
+                  <div id="main2132"><img src="/nasanews.webp"
+                      style="height: 35vh; width: 20vw; position: absolute; filter:brightness(100%);"></div>
+                </div>
+              </div>
+              <div id="main22">
+                <div id="main221">
+                  <div id="main2211">Quick Updates</div>
+                  <div id="main2212">
+                    <marquee>Nasa to launch NISAR in combination with ISRO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                      ISRO TO SEND MEN TO MOON IN ITS GAGANYAAN MISSION VERY SOON </marquee>
+                  </div>
+                </div>
+                <div id="main222">
+                  <div id="main2221">Subscribe to our Weekly Blog </div>
+                  <div id="main2222">
+                    <div id="main2222a"
+                      style="height: 5vh; width:16vw;background-color:#F50079; color:white; display:flex; justify-content:center; align-items:center; border-radius:30px;"
+                      onclick="Subscribe()">SUBSCRIBE</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          
+  </section>
+  <footer id="footer">
+    <img src="logo.png" style="height: 60vh; width:35vw; position:absolute;">
+    <div id="f1">
+      <div id="f11">Home</div>
+      <div id="f12">About Us</div>
+      <div id="f13">Activities</div>
+    </div>
+    <hr style="width:7vw; position:absolute; left:45vw; top:32vh; transform:rotate(90deg);">
+    <div id="f2">
+      <div id="f21">Space Organisations</div>
+      <div id="f22">Destinations</div>
+      <div id="f23">Statistics</div>
+    </div>
+    <hr style="width:7vw; position:absolute; left:63vw; top:32vh; transform:rotate(90deg);">
+    <div id="f3">
+      <div id="f31">AstronomySection</div>
+      <div id="f32" onclick="weight()">Weight calculator</div>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function () {
+      $("#main2131").hover(function () {
+        $("").css("filter", "opacity(60%)");
+      }, function () {
+        $("").css("filter", "opacity(70%)")
+      })
+      $("#main12,#main13,#main14").hide();
+      $("#main111").click(function () {
+        $("#main11").hide();
+        $("#main12").show();
+      });
+      $("#main121").click(function () {
+        $("#main12").hide();
+        $("#main13").show();
+      });
+      $("#main122").click(function () {
+        $("#main12").hide();
+        $("#main11").show();
+      });
+      $("#main131").click(function () {
+        $("#main13").hide();
+        $("#main14").show();
+      });
+      $("#main132").click(function () {
+        $("#main13").hide();
+        $("#main12").show();
+      });
+      $("#main141").click(function () {
+        $("#main14").hide();
+        $("#main13").show();
+      });
+      $("#main2222a").hover(function () {
+        $(this).css({ "height": "6vh", "width": "19vw", "font-size": "20px", "padding": "4px" })
+      }, function () {
+        $(this).css({ "height": "5vh", "width": "16vw", "font-size": "15px" })
+      });
+
+    });
+  </script>
+</body>
+
+</html>

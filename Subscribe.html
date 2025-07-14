@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    #main {
+        height: 95vh;
+        width: 90vw;
+        background-color: #040229;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 4.5vw;
+        margin-top: 3vh;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #id1 {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url();
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-image: 100vw 100vh;
+    }
+
+    #id2 {
+        height: 80vh;
+        width: 30vw;
+
+
+    }
+
+    #id3 {
+        display: flex;
+        flex-direction: column;
+        line-height: 5vh;
+    }
+
+    #id4 {
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        width: 30vw;
+        padding-top: 5vh;
+        padding-left: 11vw;
+    }
+
+    #button {
+        background-color: #F50079;
+        color: white;
+        height: 9vh;
+        width: 16vw;
+        position: relative;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+    #button::after{
+        position: absolute;
+        content: "AANTRIXX";
+        color: #F50079;
+        border-radius: 30px;
+        font-size: 30px;
+        font-weight: bolder;
+        height: 9vh;
+        width: 16vw;
+        background-color: #040229;
+        top: -0.5vh;
+        left: -16.5vw;
+        transition: all 2s ease;
+    }
+    #button:hover::after{
+        left: 16.5vw;
+    }
+
+    .kilass {
+        border-radius: 10px;
+        height: 4vh;
+        width: 28vw;
+        margin-bottom: 1vh;
+        background-color: #fcfafb;
+        border-style: none;
+    }
+
+    .aaid {
+        color: #F50079;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <form >
+            <div style="height: 80vh; width:80vw; border-style:none; display:flex; justify-content:center; align-items:center; position:relative;">
+                
+                <legend style="color: #F50079; font-size:34px; font-weight:bolder; margin-bottom:3vh; position:absolute; left:-3vw; top:-5.5vh; ">Subscription Form</legend>
+                <div style="display: flex; flex-direction:column; margin-top:16vh; position:absolute; left:26.5vw;">
+                <label for="FN" class="aaid">First Name</label>
+                <input id="FN" type="text" placeholder="First Name" class="kilass">
+                <label for="LN" class="aaid">Last Name</label>
+                <input id="LN" type="text" placeholder="Last Name" class="kilass">
+                <label for="MN" class="aaid">Mobile Number</label>
+                <input id="MN" type="text" placeholder="Mobile Number" class="kilass">
+                <label for="mail" class="aaid">E-mail</label>
+                <input id="mail" type="text" placeholder="E-mail" class="kilass">
+                <label for="pass" class="aaid">Password</label>
+                <input id="pass" type="password" placeholder="Password" class="kilass">
+                <label for="conpass" class="aaid">Confirm Password</label>
+                <input id="conpass" type="password" placeholder="Confirm Password" class="kilass">
+                <label class="aaid">Address</label>
+                <input id="add" type="textarea" rows="5" columns="20" placeholder="Address" class="kilass">
+                <div id="id4">
+                    <button id="button" type="button" onclick="Submit()" style="position: absolute; top:
+                84%; left: 15%; font-size:21px; font-weight:bolder;">Subscribe</button>
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="" async defer></script>
+</body>
+<script>
+    function Submit() {
+        let r = 0;
+
+        let pass = document.getElementById('pass').value;
+        let conpass = document.getElementById('conpass').value;
+        if (pass != conpass) {
+            window.alert("The password does not match the confirmation password");
+            r++;
+        }
+
+        var mobileNumber = document.getElementById('MN').value;
+        var mobileNumberPattern = /^[0-9]{10}$/;
+        if (!mobileNumberPattern.test(mobileNumber)) {
+            alert('Please enter a valid 10-digit mobile number.');
+            return false;
+            r++;
+        }
+        let email = document.getElementById('mail').value;
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.match(emailPattern)) {
+            window.alert("Invalid Email Address");
+            r++;
+        }
+        if (r == 0) {
+            window.location.href = "aftersubscribe.html";
+        }
+    }
+</script>
+
+</html>
